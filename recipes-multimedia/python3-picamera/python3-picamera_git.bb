@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=4de8aab427192e4a8322a71375d20e21"
 RDEPENDS:${PN} = "python3-numbers   \
                   python3-ctypes    \
                   python3-colorzero \
-                  picamera-libs     \
+                  userland          \
 "
 
 SRC_URI = "git://git@github.com/waveform80/picamera.git;protocol=ssh;branch=master"

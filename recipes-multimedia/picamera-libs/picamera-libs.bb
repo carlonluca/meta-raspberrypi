@@ -6,13 +6,15 @@ LIC_FILES_CHKSUM = "file://opt/vc/LICENCE;md5=86e53f5f5909ee66900418028de11780"
 
 include recipes-bsp/common/raspberrypi-firmware.inc
 
+DEPENDS = "userland"
+
 S = "${RPIFW_S}"
 
-do_install(){
-    rm -f ${S}/opt/vc/lib/libGLES* ${S}/opt/vc/lib/libEGL* ${S}/opt/vc/lib/libWFC.so ${S}/opt/vc/lib/libOpenVG.so
-    install -m 0755 -d ${D}${libdir}
-    install -m 0755 ${S}/opt/vc/lib/*.so ${D}${libdir}
-}
+#do_install(){
+#    rm -f ${S}/opt/vc/lib/libGLES* ${S}/opt/vc/lib/libEGL* ${S}/opt/vc/lib/libWFC.so ${S}/opt/vc/lib/libOpenVG.so
+#    install -m 0755 -d ${D}${libdir}
+#    install -m 0755 ${S}/opt/vc/lib/*.so ${D}${libdir}
+#}
 
 FILES:${PN} = "${libdir}"
 
